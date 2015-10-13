@@ -16,3 +16,5 @@
 !/log/.keep
 /tmp
 vendor/assets
+node_modules/jasmine-core node_modules/karma node_modules/karma-chrome-launcher node_modules/karma-firefox-launcher node_modules/karma-jasmine node_modules/karma-junit-reporter node_modules/protractor node_modules/shelljs
+node_modules
