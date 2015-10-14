@@ -1,16 +1,28 @@
-<h1>Article Creation</h1>
+<div class="md-toolbar-tools">
+  <h1>ARTICLE CREATION</h1>
+  <md-button ng-click="vm.save(vm.article)">Save</md-button>
+</div>
 
 <div layout="column" ng-cloak>
   <md-content layout-padding>
     <form name="article-form">
       <md-input-container flex>
         <label>Title</label>
-        <input ng-model="vm.title">
+        <input ng-model="vm.article.title">
       </md-input-container>
-      <md-input-container flex>
-        <label>Text</label>
-        <textarea ng-model="vm.text" columns="1"></textarea>
-      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Text</label>
+          <textarea ng-model="vm.article.text" columns="1"></textarea>
+        </md-input-container>
+        <md-input-container flex>
+          <div class="preview">
+            <h5>Preview</h5>
+            <hr />
+            <div btf-markdown="vm.article.text"></div>
+          </div>
+        </md-input-container>
+      </div>
     </form>
   </md-content>
 </div>

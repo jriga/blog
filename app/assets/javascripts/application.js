@@ -16,4 +16,7 @@
 //= require angular-animate/angular-animate
 //= require angular-aria/angular-aria
 //= require angular-material/angular-material
+//= require angular-sanitize/angular-sanitize
+//= require angular-markdown-directive/markdown
+//= require showdown/compressed/Showdown
 //= require_tree .

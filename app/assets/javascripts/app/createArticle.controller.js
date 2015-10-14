@@ -9,7 +9,7 @@
   function CreateArticleCtrl(){
     var vm = this;
 
-    
+    vm.article = {title: '', text: ''};
   }
 
 })();

@@ -7,7 +7,8 @@
       'ngResource',
       'ngAnimate', 
       'ngAria',
-      'ngMaterial'
+      'ngMaterial',
+      'btford.markdown'
     ])
     .config(['$routeProvider', config]);
 
