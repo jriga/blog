@@ -1,14 +1,19 @@
 module.exports = function(config){
   config.set({
 
-    basePath : '../../vendor/assets/bower_components/',
+    basePath : '../../',
 
     files : [
-      'angular/angular.js',
-      'angular-route/angular-route.js',
-      'angular-mocks/angular-mocks.js',
-      '../../../app/assets/javascripts/application.js',
-      '../../../spec/javascripts/**/*.js'
+      'vendor/assets/bower_components/angular/angular.js',
+      'vendor/assets/bower_components/angular-route/angular-route.js',
+      'vendor/assets/bower_components/angular-resource/angular-resource.js',
+      'vendor/assets/bower_components/angular-animate/angular-animate.js',
+      'vendor/assets/bower_components/angular-aria/angular-aria.js',
+      'vendor/assets/bower_components/angular-material/angular-material.js',
+      'vendor/assets/bower_components/angular-mocks/angular-mocks.js',
+      'vendor/assets/bower_components/faker/build/build/faker.js',
+      'app/assets/javascripts/app/**/*.js',
+      'spec/javascripts/**/*.js'
     ],
 
     autoWatch : true,

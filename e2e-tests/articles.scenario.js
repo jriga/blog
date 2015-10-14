@@ -4,7 +4,6 @@
 
 describe('blog articles', function() {
 
-
   it('loads angular', function() {
     browser.get('/');
     expect(browser.getTitle()).toEqual('Blog');
@@ -13,6 +12,5 @@ describe('blog articles', function() {
       expect(articles.length).toBe(2)
     });
   });
-
     
 });
