@@ -10,9 +10,12 @@ module.exports = function(config){
       'vendor/assets/bower_components/angular-animate/angular-animate.js',
       'vendor/assets/bower_components/angular-aria/angular-aria.js',
       'vendor/assets/bower_components/angular-material/angular-material.js',
+      'vendor/assets/bower_components/angular-sanitize/angular-sanitize.js',
+      'vendor/assets/bower_components/angular-markdown-directive/markdown.js',
+      'vendor/assets/bower_components/showdown/compressed/Showdown.js',
       'vendor/assets/bower_components/angular-mocks/angular-mocks.js',
       'vendor/assets/bower_components/faker/build/build/faker.js',
-      'app/assets/javascripts/app/**/*.js',
+      'app/assets/javascripts/app/**/*js',
       'spec/javascripts/**/*.js'
     ],
 

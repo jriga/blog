@@ -109,6 +109,8 @@ RSpec::Matchers.define :have_json_body do |expected|
     if expected.is_a?(Array)
       expected_payload = expected.map {|e| format_date[e.attributes] }
       expect(actual_payload).to match_array(expected_payload)
+    elsif expected.is_a?(Hash)
+      expect(actual_payload).to include(expected)
     else
       expect(actual_payload).to include(format_date[expected.attributes])
     end

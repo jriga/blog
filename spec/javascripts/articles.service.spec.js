@@ -2,7 +2,8 @@
 
 describe('Article service',function(){
   var article,
-      resQuery = [{
+      resHTTP = [{
+        id    : 1,
         title : 'my Title',
         text  : 'my text',
       }];
@@ -13,7 +14,8 @@ describe('Article service',function(){
     module(function($provide){
       $provide.value('$resource',function(){
         return {
-          query : jasmine.createSpy('mockResource').and.returnValue(resQuery)
+          query : jasmine.createSpy('mockResource').and.returnValue(resHTTP),
+          save  : jasmine.createSpy('mockSave').and.returnValue(resHTTP[0])
         };
       });
     });
@@ -26,8 +28,18 @@ describe('Article service',function(){
   describe('.all()',function(){
 
     it('returns all articles', function(){
-      expect(article.all()).toEqual(resQuery);
+      expect(article.all()).toEqual(resHTTP);
     });
   });
 
+
+  describe('.save(data)', function(){
+    it('saves article in backend',function(){
+      var data = {
+        title: resHTTP[0].title,
+        text:  resHTTP[0].text
+      };
+      expect(article.save(data)).toEqual(resHTTP[0]);
+    });
+  });
 });
