@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use bower for front end asset management
 gem 'bower-rails'
 
+gem 'high_voltage'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

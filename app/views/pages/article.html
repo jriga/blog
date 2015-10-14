@@ -1,0 +1,16 @@
+<h1>Article Creation</h1>
+
+<div layout="column" ng-cloak>
+  <md-content layout-padding>
+    <form name="article-form">
+      <md-input-container flex>
+        <label>Title</label>
+        <input ng-model="vm.title">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Text</label>
+        <textarea ng-model="vm.text" columns="1"></textarea>
+      </md-input-container>
+    </form>
+  </md-content>
+</div>

@@ -16,11 +16,14 @@
   function config($routeProvider){
     $routeProvider.
       when('/', {
-        templateUrl  : 'articles.html',
+        templateUrl  : '/pages/articles.html',
         controller   : 'ArticlesCtrl',
-        controllerAs : 'vm',
-        resolve      :  {          
-        }
+        controllerAs : 'vm'
+      }).
+      when('/article',{
+        templateUrl  : '/pages/article.html',
+        controller   : 'CreateArticleCtrl',
+        controllerAs : 'vm'
       }).
       otherwise({redirectTo: '/'});
   }
