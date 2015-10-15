@@ -5,8 +5,8 @@
     .module('blog')
     .controller('CreateArticleCtrl', CreateArticleCtrl);
 
-  CreateArticleCtrl.$inject = ['article'];
-  function CreateArticleCtrl(article){
+  CreateArticleCtrl.$inject = ['Article'];
+  function CreateArticleCtrl(Article){
     var vm = this;
 
     vm.article = {title: '', text: ''};
@@ -15,7 +15,7 @@
     /////////////////////
 
     function saveFn(data){
-      article.save(data);
+      Article.save({article:data});
     }
   }
 

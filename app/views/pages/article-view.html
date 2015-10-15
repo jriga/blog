@@ -1,0 +1,7 @@
+<md-toolbar class="md-primary md-hue-2">
+  <div class="md-toolbar-tools">
+    <h2 class="md-flex" flex="80">{{vm.article.title}}</h2>
+    <a flex="20" class="md-button" ng-href="#/article/{{vm.article.id}}/edit">Edit</a>
+  </div>
+</md-toolbar>
+<md-content flex layout-padding btf-markdown="vm.article.text"></md-content>

@@ -1,18 +1,23 @@
 (function(){
   'use strict';
-  
+
   angular
     .module('blog')
     .controller('ArticlesCtrl', ArticlesCtrlAs);
 
-  ArticlesCtrlAs.$inject = ['article','previewFilter'];
-  function ArticlesCtrlAs(article, previewFilter) {
+  ArticlesCtrlAs.$inject = ['Article','previewFilter','$location'];
+  function ArticlesCtrlAs(Article, previewFilter,$location) {
     /* jshint validthis: true */
-    var vm = this;
-    vm.articles = article.all(format);
+    var vm      = this;
+    vm.articles = Article.query(format);
+    vm.show     = showFn;
 
 
     ////////////////////////////////////
+    function showFn(articleId){
+      $location.path('/article/'+articleId);
+    }
+
     function format(itemList){
       var data = [];
       angular.forEach(itemList, function(item,idx){

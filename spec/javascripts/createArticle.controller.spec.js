@@ -4,16 +4,16 @@ describe('Create Article Controller', function(){
   var CreateArticleCtrl,
       scope,
       article,
-      articleSrv;
+      Article;
 
   beforeEach(module('blog'));
 
   beforeEach(function(){
-    articleSrv = jasmine.createSpyObj('articleSrv',['save']);
+    Article = jasmine.createSpyObj('Article',['save']);
 
     module(function($provide){
-      $provide.factory('article',function(){
-        return articleSrv;
+      $provide.factory('Article',function(){
+        return Article;
       });
     });
 
@@ -34,7 +34,7 @@ describe('Create Article Controller', function(){
 
   it('saves article', function(){
     CreateArticleCtrl.save(article);
-    expect(articleSrv.save).toHaveBeenCalledWith(article);
+    expect(Article.save).toHaveBeenCalledWith({article:article});
   });
 });
 

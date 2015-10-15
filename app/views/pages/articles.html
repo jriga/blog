@@ -1,14 +1,15 @@
 <div flex ng-cloak>
   <md-grid-list
      md-cols="6"
-     md-row-height="16:9"
+     md-row-height="1:1"
      md-gutter="5px">
 
     <md-grid-tile ng-repeat="a in vm.articles" 
                   md-rowspan="{{a.row}}" 
                   md-colspan="{{a.col}}" 
                   md-colspan-sm="1" 
-                  ng-class="a.class">
+                  ng-class="a.class"
+                  ng-click="vm.show(a.id)">
       <img ng-src="{{a.imageUrl}}">
       <div btf-markdown="a.preview"></div>
       <md-grid-tile-footer>

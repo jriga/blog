@@ -25,7 +25,7 @@ describe('blog articles', function() {
       expect(browser.getTitle()).toEqual('Blog');
 
       element.all(by.binding('a.title')).then(function(articles){
-        expect(articles.length).toBe(2)
+        expect(articles.length > 1).toEqual(true);
       });
     });
 

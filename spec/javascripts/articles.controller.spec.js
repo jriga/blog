@@ -11,9 +11,9 @@ describe('ArticlesCtrl',function(){
     articles =  [{title: 'my Title', text: 'my Text'}];
 
     module(function($provide){
-      $provide.factory('article', function(){
+      $provide.factory('Article', function(){
         return {
-          all : function(callback){ return callback(articles); }
+          query: function(callback){ return callback(articles); }
         };
       });
     });
@@ -31,7 +31,6 @@ describe('ArticlesCtrl',function(){
 
   it('applies preview filter to articles',function(){
     var article = ArticlesCtrl.articles[0];
-
     expect(article).toEqual(jasmine.objectContaining({
       preview:'my Text ...'
     }));
